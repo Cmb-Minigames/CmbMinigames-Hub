@@ -1,0 +1,8 @@
+name: CmbMinigamesServer
+version: '0.1'
+main: xyz.devcmb.cmbMinigamesServer.CmbMinigamesServer
+api-version: '1.21'
+prefix: CmbMinigames
+authors: [ DevCmb ]
+description: One of the plugins for the CmbMinigames server.
+website: devcmb.xyz
