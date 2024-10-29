@@ -1,7 +1,8 @@
 package xyz.devcmb.cmbMinigamesServer;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import xyz.devcmb.cmbMinigamesServer.CMBase.CmbMinigames;
+import xyz.devcmb.cmbMinigamesServer.lobby.listeners.ListenerManager;
+
 import java.util.logging.Logger;
 
 public final class CmbMinigamesServer extends JavaPlugin {
@@ -21,13 +22,12 @@ public final class CmbMinigamesServer extends JavaPlugin {
         LOGGER = getLogger();
         VERSION = getDescription().getVersion();
         plugin = this;
-        saveDefaultConfig();
 
-        CmbMinigames.onEnable();
+        ListenerManager.register();
+        saveDefaultConfig();
     }
 
     @Override
     public void onDisable() {
-       CmbMinigames.onDisable();
     }
 }
