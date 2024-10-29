@@ -14,7 +14,11 @@ public class PlayerJoin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         player.getInventory().clear();
-        player.teleport(Bukkit.getWorld("world").getSpawnLocation());
+
+        Location spawnLocation = Bukkit.getWorld("world").getSpawnLocation();
+        spawnLocation.setYaw(90);
+        spawnLocation.setPitch(0);
+        player.teleport(spawnLocation);
 
         Compass.giveCompass(player);
         TeleportBow.giveBow(player);
