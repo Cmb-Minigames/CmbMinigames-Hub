@@ -23,6 +23,7 @@ public final class CmbMinigamesServer extends JavaPlugin {
         VERSION = getDescription().getVersion();
         plugin = this;
 
+        getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         ListenerManager.register();
         saveDefaultConfig();
     }
