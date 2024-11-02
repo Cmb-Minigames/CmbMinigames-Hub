@@ -6,3 +6,4 @@ prefix: CmbMinigames
 authors: [ DevCmb ]
 description: One of the plugins for the CmbMinigames server.
 website: devcmb.xyz
+softdepend: ["PlaceholderAPI"]
