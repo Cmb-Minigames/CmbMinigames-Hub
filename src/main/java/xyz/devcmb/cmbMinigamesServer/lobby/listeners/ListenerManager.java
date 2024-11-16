@@ -9,5 +9,6 @@ public class ListenerManager {
         Bukkit.getPluginManager().registerEvents(new TeleportBow(), CmbMinigamesServer.getPlugin());
         Bukkit.getPluginManager().registerEvents(new BreakBlocking(), CmbMinigamesServer.getPlugin());
         Bukkit.getPluginManager().registerEvents(new Compass(), CmbMinigamesServer.getPlugin());
+        Bukkit.getPluginManager().registerEvents(new ChatListeners(), CmbMinigamesServer.getPlugin());
     }
 }

@@ -6,6 +6,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import xyz.devcmb.cmbMinigamesServer.CmbMinigamesServer;
+import xyz.devcmb.cmbMinigamesServer.lobby.misc.ScoreboardManager;
 import xyz.devcmb.cmbMinigamesServer.lobby.tools.Compass;
 import xyz.devcmb.cmbMinigamesServer.lobby.tools.TeleportBow;
 
@@ -22,5 +24,9 @@ public class PlayerJoin implements Listener {
 
         Compass.giveCompass(player);
         TeleportBow.giveBow(player);
+
+        Bukkit.getScheduler().runTaskTimer(CmbMinigamesServer.getPlugin(), () -> {
+            ScoreboardManager.updateScoreboard(player);
+        }, 0, 10L);
     }
 }
