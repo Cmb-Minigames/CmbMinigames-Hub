@@ -39,7 +39,7 @@ public class TeleportBow implements Listener {
         if (event.getEntity() instanceof EnderPearl enderPearl) {
             if (enderPearl.getShooter() instanceof Player player) {
                 Location hitLocation = enderPearl.getLocation();
-                Location teleportLocation = hitLocation.clone().add(enderPearl.getVelocity().normalize().multiply(2));
+                Location teleportLocation = hitLocation.clone().add(enderPearl.getVelocity().normalize().multiply(2)).add(0, 1, 0);
                 teleportLocation.setDirection(enderPearl.getVelocity());
                 player.teleport(teleportLocation);
                 enderPearl.remove();
